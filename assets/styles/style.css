@@ -74,6 +74,8 @@ input[type=text]:focus{
     text-transform: capitalize;
     color: white;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .item a{
@@ -99,12 +101,18 @@ input[type=text]:focus{
     padding: 1px 10px;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
 .icon-checkmark:before {
-    background-image: url(../img/check.svg);
+    background-image: url(../images/check.svg);
 }
 
 .icon-trash:before {
-    background-image: url(../img/delete.svg);
+    background-image: url(../images/delete.svg);
     margin-right: 12px;
 }
 
