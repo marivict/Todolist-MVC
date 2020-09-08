@@ -4,13 +4,13 @@
             <h1>To do list</h1>
         </div>
         <div id="todo">
-            <form method="post" action="/usuario/create">
+            <form method="post" action="/task/create">
                 <input type="text" name="nombre">
             </form>
             <ul id="list">
-                <% usuarios.forEach(function(user){%>
-                <li class="item"> <span><%= user.nombre %></span>
-                    <form method="post" action="/usuario/delete/<%= user.id %>">
+                <% items.forEach(function(item){%>
+                <li class="item"> <span><%= item.nombre %></span>
+                    <form method="post" action="/task/delete/<%= item.id %>">
                         <button type="submit" class= "item-delete"><i class="icon icon-trash" data-id="0"></i></button>
                     </form>
                 </li>
