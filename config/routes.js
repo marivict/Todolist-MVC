@@ -20,8 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  'post /usuario/delete/:id': 'UsuarioController.delete',
-  'post /usuario/update/:id': 'UsuarioController.update',
+  'post /task/delete/:id': 'TaskController.delete',
+  'post /task/update/:id': 'TaskController.update',
 
 
   /***************************************************************************
