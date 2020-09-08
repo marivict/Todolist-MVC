@@ -105,6 +105,11 @@ button {
     background-color: transparent;
     border: none;
     box-shadow: none;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
 }
 
 .icon-checkmark:before {
@@ -114,9 +119,25 @@ button {
 .icon-trash:before {
     background-image: url(../images/delete.svg);
     margin-right: 12px;
+    cursor: pointer;
 }
 
 .height-295 {
     height:295px;
     overflow: scroll;
+}
+
+.btn {
+    width: 150px;
+    text-align: center;
+    height: 50px;
+    background: #343A40;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
 }
