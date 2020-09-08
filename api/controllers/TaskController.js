@@ -7,31 +7,31 @@
 
 module.exports = {
     add: function(req, res){
-        Usuario.find({}).exec(function(err, users){
+        Task.find({}).exec(function(err, item){
             if(err){
                 res.send(505, {error: 'Database Error'});
             }
-            res.view('add', {usuarios:users})
+            res.view('task/add', {items:item})
         })
     },
 
     create: function(req, res){
         var nombre = req.body.nombre
         
-        Usuario.create({nombre:nombre}).exec(function(err){
+        Task.create({nombre:nombre}).exec(function(err){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.redirect('/usuario/add')
+            res.redirect('/task/add')
         })
     },
 
     delete: function(req, res){
-        Usuario.destroy({id:req.params.id}).exec(function(err){
+        Task.destroy({id:req.params.id}).exec(function(err){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.redirect('/usuario/add')
+            res.redirect('/task/add')
         })
         return false
     },
@@ -45,11 +45,11 @@ module.exports = {
             check = 0
         }
 
-        Usuario.update({id: req.params.id}, {check:check}).exec(function (err){
+        Task.update({id: req.params.id}, {check:check}).exec(function (err){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.redirect('/usuario/add')
+            res.redirect('/task/add')
 
         })
     }
