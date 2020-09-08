@@ -7,14 +7,11 @@
 
 module.exports = {
   datastore:'default',
-  identity: 'Usuario',
-  tableName: 'usuarios',
+  identity: 'Task',
+  tableName: 'tasks',
 
   attributes: {
-    nombre: {type:'string', required:true},
-    email: {type:'string',},
-    check:{type:'number',},
-      
+    nombre: {type:'string', required:true}
   },
 
 };
